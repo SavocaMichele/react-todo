@@ -1,0 +1,58 @@
+.Typo {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--ui-color-neutral-00);
+
+    // Strong
+    &.strong {
+        font-weight: 600;
+    }
+
+    // Italic
+    &.italic {
+        font-style: italic;
+    }
+
+    // Colors
+    &.--color-primary {
+        color: var(--ui-color-primary-80);
+    }
+
+    &.--color-light {
+        color: var(--ui-color-neutral-50);
+    }
+
+    &.--color-gray {
+        color: var(--ui-color-neutral-30);
+    }
+
+    &.--color-error {
+        color: var(--ui-color-error-80);
+    }
+
+    &.--color-success {
+        color: var(--ui-color-success-80);
+    }
+
+    &.--color-warning {
+        color: var(--ui-color-warning-80);
+    }
+
+    // Sizes
+    &.--size-xs {
+        font-size: 12px;
+    }
+
+    &.--size-sm {
+        font-size: 14px;
+    }
+
+    &.--size-md {
+        font-size: 16px;
+    }
+
+    &.--size-lg {
+        font-size: 18px;
+    }
+}

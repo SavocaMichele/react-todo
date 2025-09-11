@@ -1,0 +1,42 @@
+.Column {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--ui-color-neutral-80);
+    padding: var(--ui-inset-lg) 0 var(--ui-inset-lg) var(--ui-inset-lg);
+    border-radius: var(--ui-inset-sm);
+    height: 100%;
+
+    .Title {
+        display: flex;
+        align-items: center;
+        gap: var(--ui-inset-md);
+        margin-bottom: var(--ui-inset-lg);
+
+        .Status {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+
+            &.--status-todo {
+                background-color: var(--ui-color-warning-80);
+            }
+
+            &.--status-in-progress {
+                background-color: var(--ui-color-primary-40);
+            }
+
+            &.--status-done {
+                background-color: var(--ui-color-success-80);
+            }
+        }
+    }
+
+    .Content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--ui-inset-lg);
+        padding-right: var(--ui-inset-lg);
+        flex-grow: 1;
+    }
+}

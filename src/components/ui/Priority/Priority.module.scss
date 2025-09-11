@@ -1,0 +1,47 @@
+.Priority {
+    display: flex;
+    align-items: center;
+    gap: var(--ui-inset-sm);
+    padding: var(--ui-inset-xs) var(--ui-inset-sm);
+    border-radius: var(--ui-inset-xs);
+    background-color: var(--ui-color-neutral-90);
+
+    .Circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    &.--level-high {
+        background-color: var(--ui-color-error-100);
+
+        .Circle {
+            background-color: var(--ui-color-error-80);
+        }
+    }
+
+    &.--level-medium {
+        background-color: var(--ui-color-warning-100);
+
+        .Circle {
+            background-color: var(--ui-color-warning-80);
+        }
+    }
+
+    &.--level-low {
+        background-color: var(--ui-color-success-100);
+
+        .Circle {
+            background-color: var(--ui-color-success-80);
+        }
+    }
+
+    &.--level-normal {
+        background-color: var(--ui-color-neutral-80);
+
+        .Circle {
+            background-color: var(--ui-color-neutral-50);
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.Stack {
+    display: flex;
+    flex-direction: row;
+
+    &.--width-full {
+        width: 100%;
+    }
+
+    // Justify
+    &.--justify-flex-start {
+        justify-content: flex-start;
+    }
+
+    &.--justify-flex-end {
+        justify-content: flex-end;
+    }
+
+    &.--justify-center {
+        justify-content: center;
+    }
+
+    &.--justify-space-between {
+        justify-content: space-between;
+    }
+
+    &.--justify-space-around {
+        justify-content: space-around;
+    }
+
+    // Align
+    &.--align-flex-start {
+        align-items: flex-start;
+    }
+
+    &.--align-flex-end {
+        align-items: flex-end;
+    }
+
+    &.--align-center {
+        align-items: center;
+    }
+
+    &.--align-baseline {
+        align-items: baseline;
+    }
+
+    &.--align-stretch {
+        align-items: stretch;
+    }
+
+    &.--wrap-nowrap {
+        flex-wrap: nowrap;
+    }
+
+    &.--wrap-wrap {
+        flex-wrap: wrap;
+    }
+
+    &.--wrap-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    // Gap
+    &.--gap-xs {
+        gap: var(--ui-inset-xs);
+    }
+
+    &.--gap-sm {
+        gap: var(--ui-inset-sm);
+    }
+
+    &.--gap-md {
+        gap: var(--ui-inset-md);
+    }
+
+    &.--gap-lg {
+        gap: var(--ui-inset-lg);
+    }
+
+    &.--gap-xl {
+        gap: var(--ui-inset-xl);
+    }
+
+    // Wrap
+    &.--wrap-nowrap {
+        flex-wrap: nowrap;
+    }
+
+    &.--wrap-wrap {
+        flex-wrap: wrap;
+    }
+
+    &.--wrap-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    // Direction
+    &.--direction-row {
+        flex-direction: row;
+    }
+
+    &.--direction-column {
+        flex-direction: column;
+    }
+}

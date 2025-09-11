@@ -1,0 +1,35 @@
+.Separator {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--ui-color-neutral-70);
+
+    &.--dashed {
+        border-bottom: 1px solid transparent;
+        border-image: repeating-linear-gradient(
+            to right,
+            var(--ui-color-neutral-70) 0 10px,     /* dash length */
+            transparent 10px 20px /* gap size */
+        ) 20 round;
+    }
+
+    // Margins
+    &.--margin-xs {
+        margin: var(--ui-inset-xs) 0;
+    }
+
+    &.--margin-sm {
+        margin: var(--ui-inset-sm) 0;
+    }
+
+    &.--margin-md {
+        margin: var(--ui-inset-md) 0;
+    }
+
+    &.--margin-lg {
+        margin: var(--ui-inset-lg) 0;
+    }
+
+    &.--margin-xl {
+        margin: var(--ui-inset-xl) 0;
+    }
+}
