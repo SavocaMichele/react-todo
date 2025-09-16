@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import styles from './Stack.module.scss';
+import React from "react";
 
 interface StackProps {
     direction?: 'row' | 'column';
@@ -12,6 +13,12 @@ interface StackProps {
     children?: React.ReactNode;
 }
 
+/**
+ * A flexible layout component that arranges its children in a stack (either row or column)
+ *
+ * @param props
+ * @constructor
+ */
 export const Stack: React.FC<StackProps> = (props) => {
     return (
         <div className={clsx(

@@ -6,6 +6,7 @@ import { Priority } from '../ui/Priority/Priority';
 import styles from './Todo.module.scss';
 import { Separator } from '../ui/Separator/Separator';
 import { Draggable } from '../ui/DragDrop/Draggable';
+import clsx from "clsx";
 
 
 /**
@@ -16,7 +17,14 @@ import { Draggable } from '../ui/DragDrop/Draggable';
 export const Todo = (props: TodoProps) => {
     
     return (
-        <Draggable className={styles.Todo} key={props.id} id={props.id}>
+        <Draggable
+            className={clsx(
+                styles.Todo,
+                props.preview && styles['--is-preview']
+            )}
+            key={props.id}
+            id={props.id}
+        >
             <Stack direction='column' gap='md' width='full'>
                 {/* Header */}
                 <Stack justify='space-between' align='center' gap='sm' width='full'>

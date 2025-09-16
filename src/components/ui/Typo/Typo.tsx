@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import styles from "./Typo.module.scss"
+import React from "react";
 
 
 interface TypoProps {
@@ -11,6 +12,12 @@ interface TypoProps {
     italic?: boolean;
 }
 
+/**
+ * A simple typography component to style text with different colors sizes and styles
+ *
+ * @param props
+ * @constructor
+ */
 export const Typo: React.FC<TypoProps> = (props) => {
 
     return (

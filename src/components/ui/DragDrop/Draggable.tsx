@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { draggable } from '@atlaskit/pragmatic-drag-and-drop/element/adapter';
+import { setCustomNativeDragPreview } from '@atlaskit/pragmatic-drag-and-drop/element/set-custom-native-drag-preview';
 import clsx from 'clsx';
 import styles from './DragDrop.module.scss';
 
@@ -44,6 +45,31 @@ export const Draggable: React.FC<DraggableProps> = (props) => {
                 setDragging(false);
                 props.onDrop?.();
             },
+
+            onGenerateDragPreview: ({ nativeSetDragImage }) => {
+                setCustomNativeDragPreview({
+                    nativeSetDragImage,
+                    getOffset: ({ container }) => ({
+                        x: container.clientWidth / 2,
+                        y: container.clientHeight / 2,
+                    }),
+                    render: ({ container }) => {
+                        const preview = element.cloneNode(true) as HTMLElement;
+
+                        console.log(element.clientWidth)
+
+                        preview.style.width = `220px`;
+                        preview.style.opacity = '1';
+                        preview.style.transform = 'scale(1.02)';     // subtle emphasis
+                        preview.style.boxShadow = '0 10px 24px rgba(0,0,0,0.25)';
+                        preview.style.pointerEvents = 'none';
+
+                        container.appendChild(preview);
+
+                        return () => container.removeChild(preview);
+                    },
+                });
+            }
         });
     }, []); 
 

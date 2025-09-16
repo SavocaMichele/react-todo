@@ -1,0 +1,9 @@
+.Board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 400px));
+    gap: var(--ui-inset-xl);
+    padding: var(--ui-inset-lg);
+    background-color: var(--ui-color-neutral-90);
+    height: calc(100vh - var(--ui-header-height));
+    overflow-x: auto;
+}

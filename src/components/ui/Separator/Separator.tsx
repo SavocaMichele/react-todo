@@ -6,6 +6,12 @@ interface SeparatorProps {
     dashed?: boolean;
 }
 
+/**
+ * A simple horizontal separator line with optional margin and dashed style
+ *
+ * @param props
+ * @constructor
+ */
 export const Separator = (props: SeparatorProps) => {
     return (
         <div className={clsx(

@@ -1,13 +1,14 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
 }
 
 body {
-  font-family: 'Roboto', 'Open Sans', sans-serif;
-  line-height: 1.5;
-  font-size: 14px;
-  background-color: var(--ui-color-neutral-100);
-  color: var(--ui-color-neutral-00);
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-size: 14px;
+    background-color: var(--ui-color-neutral-100);
+    color: var(--ui-color-neutral-00);
 }

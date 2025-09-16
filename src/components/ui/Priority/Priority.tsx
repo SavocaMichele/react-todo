@@ -8,6 +8,11 @@ interface PriorityProps {
     level: TodoPriority;
 }
 
+/**
+ * A small component to display the priority level with a colored circle and text
+ * @param props
+ * @constructor
+ */
 export const Priority = (props: PriorityProps) => {
 
     const getPriorityColor = (level: TodoPriority) => {

@@ -19,30 +19,6 @@ interface ColumnProps {
  */
 export const Column = (props: ColumnProps) => {
 
-    const [todos, setTodos] = React.useState<TodoProps[]>(props.todos);
-
-    const showPlaceholder = (id?: string) => {
-        if (!id) return;
-
-        // Change the status and position of the todo in the todos array
-        setTodos(prev => {
-            // If the todo is already in the list, remove it
-            const filtered = prev.filter(todo => todo.id !== id);
-
-            // Find the index of the todo that is being dragged over
-            const index = filtered.findIndex(todo => todo.status === props.status);
-
-            if (index === -1) {
-                filtered.push(todos.find(todo => todo.id === id)!);
-            }
-            else {
-                filtered.splice(index, 0, todos.find(todo => todo.id === id)!);
-            }
-
-            return filtered;
-        });
-    }
-
     return (
         <div className={styles.Column}>
             <div className={styles.Title}>
@@ -53,9 +29,8 @@ export const Column = (props: ColumnProps) => {
             <DropTarget
                 className={styles.Content}
                 id={props.status}
-                onDragEnter={showPlaceholder}
             >
-                {todos.map(todo => (
+                {props.todos.map(todo => (
 
                     <Todo key={todo.id} {...todo} />
 

@@ -9,7 +9,7 @@ interface DropTargetProps {
     className?: string;
     id: string;
 
-    onDragEnter?:   (id?: string) => void;
+    onDragEnter?:   () => void;
     onDragLeave?:   () => void;
     onDrop?:        () => void;
 }
@@ -37,7 +37,7 @@ export const DropTarget: React.FC<DropTargetProps> = (props) => {
 
             onDragEnter: () => {
                 setIsDraggedOver(true);
-                props.onDragEnter?.(props.id);
+                props.onDragEnter?.();
             },
 
             onDragLeave: () => {
