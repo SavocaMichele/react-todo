@@ -1,12 +1,30 @@
-# React + Vite
+# React Kanban Board (TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, **Kanban board** built with **React + TypeScript**, styled with **SCSS Modules**, and powered by **Atlassian’s Pragmatic Drag and Drop**.  
+Design inspired by Alex Lauderdale 👉 [Volley Kanban Board](https://dribbble.com/shots/21284971-Volley-Kanban-Board).
 
-Currently, two official plugins are available:
+> **Purpose:** This project exists purely to demonstrate **TypeScript** and **React** proficiency.  
+> It intentionally has **no real application functionality** beyond **drag & drop** (no auth, no API, no persistence by design).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Drag & drop** between columns using Atlassian’s **Pragmatic DnD**
+  - Column hover preview (shows where the card will land)
+- **Local persistence** via `localStorage` (no backend required)
+- **TypeScript-first** codebase
+- **SCSS Modules** for component-scoped styles
+- **Self-made UI components** (no UI kit):
+  - layout primitives (Board, Column, Card)
+  - small building blocks (separator, stack, typo)
+  - consistent styles via **SCSS Modules** (no CSS framework)
+
+---
+
+## 🧰 Tech Stack
+
+- React 18 + TypeScript
+- Vite
+- SCSS Modules
+- `@atlaskit/pragmatic-drag-and-drop` + helpers
