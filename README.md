@@ -1,5 +1,7 @@
 # React Kanban Board (TypeScript + Vite)
 
+![Kanban Board Preview](https://imgur.com/a/wmRCWT4)
+
 A lightweight, **Kanban board** built with **React + TypeScript**, styled with **SCSS Modules**, and powered by **Atlassian’s Pragmatic Drag and Drop**.  
 Design inspired by Alex Lauderdale 👉 [Volley Kanban Board](https://dribbble.com/shots/21284971-Volley-Kanban-Board).
 
@@ -28,3 +30,4 @@ Design inspired by Alex Lauderdale 👉 [Volley Kanban Board](https://dribbble.c
 - Vite
 - SCSS Modules
 - `@atlaskit/pragmatic-drag-and-drop` + helpers
+
